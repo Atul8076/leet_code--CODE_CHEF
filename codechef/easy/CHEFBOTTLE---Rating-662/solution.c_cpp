@@ -1,0 +1,16 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, x, k;
+        cin >> n >> x >> k;
+        
+        int bottles_filled = k / x;
+        cout << min(n, bottles_filled) << endl;
+    }
+    return 0;
+}
