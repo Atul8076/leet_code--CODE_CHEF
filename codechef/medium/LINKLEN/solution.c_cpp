@@ -1,0 +1,30 @@
+/*
+struct Node {
+    int data;
+    Node* next;
+    Node(int d) {
+        data = d;
+        next = nullptr;
+    }
+};
+*/
+
+int getLength(Node* head) {
+    //write code here...
+    int count = 1;
+    
+    Node *temp = head ;
+    if(head == NULL){
+        return 0;
+    }
+    else{
+    while(temp->next != NULL){
+        count++;
+        temp = temp->next;
+    }
+    return count;
+    }
+    
+    
+    
+}
