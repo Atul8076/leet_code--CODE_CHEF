@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+int t;
+cin>>t;
+while(t--){
+    int D,T,DM;
+    cin>>D>>T>>DM;
+    int d,t,dm;
+    cin>>d>>t>>dm;
+    int total1 = D+T+DM;
+    int total2 = d+t+dm;
+    if(total1>total2){
+        cout<<"DRAGON"<<endl;
+    }
+    else if(total1 == total2 && D>d ){
+        cout<<"DRAGON"<<endl;
+    }
+    else if(total1 == total2 && D==d && T>t){
+        cout<<"DRAGON"<<endl;
+    }
+    else if(total1 == total2 && D==d && T==t){
+        cout<<"TIE"<<endl;
+    }
+    else{
+        cout<<"SLOTH"<<endl;
+    }
+    }
+}
+
