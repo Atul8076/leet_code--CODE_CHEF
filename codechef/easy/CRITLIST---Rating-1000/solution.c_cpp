@@ -1,0 +1,43 @@
+/*
+Node is defined as:
+class Node{
+  public:
+  int data;
+  Node* next;
+  Node(int data){
+      this->data = data;
+      this->next = nullptr;
+  }
+}
+*/
+int solve(Node* head){
+Node *temp1 = head;
+
+Node *temp2 = head;
+temp2 = head->next;
+
+int minima = 0;
+int maxima = 0;
+
+    if ( head->next == NULL || head->next->next == NULL){
+        return 0;
+    }
+    while(temp2->next!= NULL){
+    if(temp1->data < temp2->data && temp2->next->data<temp2->data){
+        minima++;
+        temp1 = temp1->next;
+        temp2 = temp2->next;
+    }
+    else if(temp1->data > temp2->data && temp2->next->data>temp2->data){
+        maxima++;
+        temp1 = temp1->next;
+        temp2 = temp2->next;
+    }
+    else {
+        temp1 = temp1->next;
+        temp2 = temp2->next;
+    }
+    
+    }
+    return maxima+minima;
+}
