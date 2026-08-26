@@ -42,7 +42,7 @@ Explanation: The linked list contains a loop that begins at node x = 1. After re
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T10:25:40.861Z  
+**Submitted:** 2026-08-26T14:15:58.403Z  
 
 ```cpp
 /* Structure of Linked List Node
@@ -61,25 +61,41 @@ class Solution {
   public:
     void removeLoop(Node* head) {
         // code here
-       Node *slow = head;
+        Node *slow = head;
         Node *fast = head;
-        while(fast!= NULL && fast->next!= NULL){
+        while(fast!= NULL && fast->next != NULL){
             slow = slow->next;
             fast = fast->next->next;
             if(slow == fast){
-                slow = head;
-                while(slow!= fast){
-                    slow = slow->next;
-                    fast = fast->next;
-                }
-                while(slow->next!= fast){
-                    slow = slow->next;
-                }
-                slow->next = NULL;
-                return ;
+                break;
             }
         }
-         return; 
+        if(fast == NULL || fast->next == NULL){
+            return ;
+        }
+        else{
+            int len = 1;
+            slow = slow->next;
+            while(slow!= fast){
+                len++;
+                slow = slow->next;
+            }
+            fast = head;
+            while(len--){
+                fast = fast->next;
+            }
+            slow = head;
+            while(slow != fast){
+                slow = slow->next;
+                fast = fast->next;
+            }
+            slow = slow->next;
+            while(slow->next != fast){
+                slow = slow->next;
+            }
+            slow->next = NULL;
+            return ;
+        }
     }
 };
 ```
