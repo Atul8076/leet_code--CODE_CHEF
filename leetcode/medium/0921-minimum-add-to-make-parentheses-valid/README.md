@@ -45,29 +45,29 @@ Output: 3
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.5 MB (beats 57.18%)  
-**Submitted:** 2026-08-29T17:09:53.154Z  
+**Memory:** 8.5 MB (beats 31.44%)  
+**Submitted:** 2026-08-29T18:00:05.453Z  
 
 ```cpp
 class Solution {
 public:
     int minAddToMakeValid(string s) {
         stack<char>st;
+        int count  = 0;
         for(int i = 0 ; i<s.length(); i++){
-            if(s[i] == '('){
+            if(s[i]== '('){
                 st.push(s[i]);
             }
             else{
-                if(!st.empty() && st.top() == '('){
-                    st.pop();
-
+                if(st.empty()){
+                    count++;
                 }
                 else{
-                    st.push(s[i]);
+                    st.pop();
                 }
             }
         }
-        return st.size();
+        return st.size()+count;
     }
 };
 ```
