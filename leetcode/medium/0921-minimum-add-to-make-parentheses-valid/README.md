@@ -44,28 +44,30 @@ Output: 3
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-08-29T14:59:56.881Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 8.5 MB (beats 57.18%)  
+**Submitted:** 2026-08-29T17:09:53.154Z  
 
 ```cpp
 class Solution {
 public:
     int minAddToMakeValid(string s) {
-      stack<char>st;
-      for(int i = 0; i<s.length() ; i++){
-        if(st.empty()){
-            st.push(s[i]);
+        stack<char>st;
+        for(int i = 0 ; i<s.length(); i++){
+            if(s[i] == '('){
+                st.push(s[i]);
+            }
+            else{
+                if(!st.empty() && st.top() == '('){
+                    st.pop();
 
+                }
+                else{
+                    st.push(s[i]);
+                }
+            }
         }
-        else if(s[i] == st.top()){
-                st.pop();
-        }
-        else{
-            st.push(s[i]);
-        }
-      }
-      return st.size() ; 
+        return st.size();
     }
 };
 ```
