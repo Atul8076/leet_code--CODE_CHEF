@@ -75,7 +75,7 @@ Bob
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-25T17:35:32.030Z  
+**Submitted:** 2026-08-31T18:12:32.075Z  
 
 ```c_cpp
 #include <iostream>
