@@ -54,7 +54,7 @@ NOTHING
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T16:12:09.547Z  
+**Submitted:** 2026-09-04T16:13:33.005Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -67,10 +67,10 @@ cin>>t;
 while(t--){
     int x,y,z;
     cin>>x>>y>>z;
-    if(x>=y && x<y+z && x<z){
+    if(x>=y ){
         cout<<"PIZZA"<<endl;
     }
-    else if(x>=z && x<y && x<y+z){
+    else if(x>=z){
         cout<<"BURGER"<<endl;
     }
     else {
