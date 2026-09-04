@@ -54,9 +54,9 @@ myQueue.empty(); // return false
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 10.2 MB (beats 8.49%)  
-**Submitted:** 2026-09-04T07:11:15.702Z  
+**Runtime:** 0 ms  
+**Memory:** 8.7 MB  
+**Submitted:** 2026-09-04T07:11:34.980Z  
 
 ```cpp
 class MyQueue {
