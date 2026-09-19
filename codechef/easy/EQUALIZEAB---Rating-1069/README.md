@@ -59,36 +59,36 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-19T18:13:39.191Z  
+**Submitted:** 2026-09-19T18:14:38.976Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cmath>
+
 using namespace std;
 
+void solve() {
+    long long A, B, X;
+    cin >> A >> B >> X;
+
+    long long diff = abs(A - B);
+
+   
+    if (diff % (2 * X) == 0) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+}
+
 int main() {
-	// your code goes here
-int t;
-cin>>t;
-while(t--){
-    int a,b,x;
-    cin>>a>>b>>x;
-    int c = abs(a-b);
-    if(a == b){
-        cout<<"YES"<<endl;
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
     }
-    else{
-        if(c%2*x== 0){
-            cout<<"YES"<<endl;
-        }
-        else{
-            cout<<"NO"<<endl;
-        }
-    }
-    
+    return 0;
 }
-
-}
-
 ```
 
 ---
