@@ -68,7 +68,7 @@ Therefore, the answer is $1 + 1 + 1 = 3$
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T15:17:08.802Z  
+**Submitted:** 2026-10-25T15:17:17.113Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
