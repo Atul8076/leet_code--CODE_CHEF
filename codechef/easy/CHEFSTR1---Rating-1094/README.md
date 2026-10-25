@@ -68,7 +68,7 @@ Therefore, the answer is $1 + 1 + 1 = 3$
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T15:17:17.113Z  
+**Submitted:** 2026-10-25T15:23:09.487Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -85,8 +85,8 @@ while(t--){
     for(int i = 0 ; i<n ; i++){
         cin>>v[i];
     }
-    int sum = 0; 
-    int i = 0 , j = i+1;
+    long long sum = 0; 
+    long long  i = 0 , j = i+1;
     while(i<=n-2){
        sum += abs(v[j]-v[i]) -1;
        i++;
