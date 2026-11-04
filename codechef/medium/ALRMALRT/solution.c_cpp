@@ -1,7 +1,53 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+
 using namespace std;
 
-int main() {
-	// your code goes here
+void solve() {
+    long long X, Y, D;
+    cin >> X >> Y >> D;
 
+    long long ans = -1;
+
+    for (long long a = 1; a <= Y; ++a) {
+        long long cur = a * X;
+
+        // Candidate 1: b1 * Y <= cur
+        long long b1 = cur / Y;
+        if (b1 >= 1 && cur - b1 * Y <= D) {
+            if (ans == -1 || cur < ans) {
+                ans = cur;
+            }
+        }
+
+        // Candidate 2: b2 * Y >= cur
+        long long b2 = b1 + 1;
+        if (b2 * Y - cur <= D) {
+            long long t = b2 * Y;
+            if (ans == -1 || t < ans) {
+                ans = t;
+            }
+        }
+
+        // Agar aX - D already ans se bada ya barabar ho gaya,
+        // toh aage koi bhi chhota answer nahi mil sakta.
+        if (ans != -1 && cur - D >= ans) {
+            break;
+        }
+    }
+
+    cout << ans << "\n";
+}
+
+int main() {
+    
+   
+
+    int T;
+    cin >> T;
+    while (T--) {
+        solve();
+    }
+
+    return 0;
 }
