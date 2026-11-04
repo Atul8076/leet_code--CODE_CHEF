@@ -72,7 +72,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T14:41:00.529Z  
+**Submitted:** 2026-11-04T14:42:43.526Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -102,7 +102,8 @@ while(t--){
             count = 0 ; 
         }
     }
-    cout<<d<<endl;
+    int e = max(count,d);
+    cout<<e<<endl;
     
 }
 }
