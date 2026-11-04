@@ -72,42 +72,51 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T15:01:31.467Z  
+**Submitted:** 2026-11-04T15:02:43.962Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-int t;
-cin>>t;
-while(t--){
-    int n ;
-    cin>>n;
-    vector<int>v(n);
-    for(int i = 0 ; i<n; i++){
-        cin>>v[i];
-    }
-    
-    int count = 0 ; 
-    int d = 0 ;
-    for(int i = 0 ; i<n ; i++){
-        if(v[i]%2 == 0){
-            count++;
-            
-        }
-        else{
-            d = max(d,count);
-            count = 0 ; 
-        }
-    }
-    int e = max(count,d);
-    cout<<e<<endl;
-    
-}
-}
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int a[n];
+	    vector<int>v;
+	    for(int i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	  int  oddcount=0;
+	  for(int i=0;i<n;i++){
+	      if(a[i]%2==1){
+	          oddcount++;
+	      }
+	  }
+	  if(oddcount==0){
+	      cout<<n<<endl;
+	  }else if(oddcount%2==0){
+	      cout<<n<<endl;
+	  }else{
+	      
+	      for(int i=0;i<n;i++){
+	          if(a[i]%2==1){
+	              v.push_back(i);
+	          }
+	      }
+	      
+	      int first = v[0];
+            int last = v.back();
 
+            int ans = max(n - first - 1, last);
+            cout << ans << endl;
+	  }
+	  
+	}
+
+}
 ```
 
 ---
