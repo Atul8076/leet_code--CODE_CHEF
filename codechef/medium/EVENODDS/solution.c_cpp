@@ -25,7 +25,8 @@ while(t--){
             count = 0 ; 
         }
     }
-    cout<<d<<endl;
+    int e = max(count,d);
+    cout<<e<<endl;
     
 }
 }
